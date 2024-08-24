@@ -6465,6 +6465,7 @@ GameObject:
   - component: {fileID: 697830556}
   - component: {fileID: 697830559}
   - component: {fileID: 697830558}
+  - component: {fileID: 697830560}
   m_Layer: 0
   m_Name: Canopy
   m_TagString: Untagged
@@ -8123,6 +8124,19 @@ MonoBehaviour:
   transparencyAmount: 0.95
   defaultAlpha: 1
   fadeTime: 0.35
+--- !u!114 &697830560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697830554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8c385fc94a5254898b6c4e38412a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.1
 --- !u!1 &774330496
 GameObject:
   m_ObjectHideFlags: 0
