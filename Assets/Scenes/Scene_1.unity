@@ -7913,7 +7913,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.552772, y: 0.53897125, z: -9.940672}
+  m_LocalPosition: {x: 8.54435, y: 0.53897125, z: -9.940672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7998,7 +7998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63fc0dddc1ecbfd4795ea134430e3dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentActiveWeapon: {fileID: 0}
 --- !u!1 &561023477
 GameObject:
   m_ObjectHideFlags: 0
@@ -8596,6 +8595,7 @@ MonoBehaviour:
   moveSpeed: 5
   dashSpeed: 4
   myTrailRenderer: {fileID: 2022728743}
+  weaponCollider: {fileID: 190295352}
 --- !u!95 &675878805
 Animator:
   serializedVersion: 5
