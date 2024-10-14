@@ -5,13 +5,26 @@ using UnityEngine;
 public class Bow : MonoBehaviour, IWeapon
 {
     [SerializeField] private WeaponInfo weaponInfo;
+    [SerializeField] private GameObject arrowPrefab;
+    [SerializeField] private Transform arrowSpawnPoint;
     
-    public void Attack()
+    private Animator myAnimator;
+    
+    readonly int FIRE_HASH = Animator.StringToHash("Fire");
+    
+    private void Awake()
     {
-        Debug.Log("Stealin' from the rich and givin' to the poor!");
+        myAnimator = GetComponent<Animator>();
     }
 
-        public WeaponInfo GetWeaponInfo()
+
+    public void Attack()
+    {
+        myAnimator.SetTrigger(FIRE_HASH);
+        GameObject newArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, ActiveWeapon.Instance.transform.rotation);
+    }
+
+    public WeaponInfo GetWeaponInfo()
     {
         return weaponInfo;
     }
