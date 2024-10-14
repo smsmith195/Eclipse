@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Wand : MonoBehaviour, IWeapon
 {
+    [SerializeField] private WeaponInfo weaponInfo;
+    
     public void Update()
     {
         MouseFollowWithOffset();
@@ -12,7 +14,11 @@ public class Wand : MonoBehaviour, IWeapon
     public void Attack()
     {
         Debug.Log("You're a wizard Harry!");
-        ActiveWeapon.Instance.ToggleIsAttacking(false);
+    }
+
+        public WeaponInfo GetWeaponInfo()
+    {
+        return weaponInfo;
     }
 
     private void MouseFollowWithOffset()
