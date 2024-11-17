@@ -1196,7 +1196,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1626,7 +1626,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1923,8 +1923,8 @@ Tilemap:
     m_Data: {fileID: -945967074, guid: f0b35ddabb75a3e4ba1c342e85490f9d, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1470450951, guid: f0b35ddabb75a3e4ba1c342e85490f9d, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1599600404, guid: f0b35ddabb75a3e4ba1c342e85490f9d, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: 1377898341, guid: f0b35ddabb75a3e4ba1c342e85490f9d, type: 3}
   - m_RefCount: 3
@@ -1942,9 +1942,9 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: -559241759, guid: f0b35ddabb75a3e4ba1c342e85490f9d, type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: 1599600404, guid: f0b35ddabb75a3e4ba1c342e85490f9d, type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: 2017005990, guid: f0b35ddabb75a3e4ba1c342e85490f9d, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 49
     m_Data:
@@ -9141,7 +9141,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4917364, y: 0.53897125, z: -9.940672}
+  m_LocalPosition: {x: 0.7838613, y: 0.53897125, z: -9.940672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -5,6 +5,17 @@ using UnityEngine;
 public class Wand : MonoBehaviour, IWeapon
 {
     [SerializeField] private WeaponInfo weaponInfo;
+    [SerializeField] private GameObject magicLaser;
+    [SerializeField] private Transform magicLaserSpawnPoint;
+
+    private Animator myAnimator;
+
+    readonly int AttackHash = Animator.StringToHash("Attack");
+
+    private void Awake()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
     
     public void Update()
     {
@@ -13,10 +24,15 @@ public class Wand : MonoBehaviour, IWeapon
     
     public void Attack()
     {
-        Debug.Log("You're a wizard Harry!");
+        myAnimator.SetTrigger(AttackHash);
     }
 
-        public WeaponInfo GetWeaponInfo()
+    public void SpawnWandProjectileAnimEvent()
+    {
+        GameObject newLaser = Instantiate(magicLaser, magicLaserSpawnPoint.position, Quaternion.identity);
+    }
+
+    public WeaponInfo GetWeaponInfo()
     {
         return weaponInfo;
     }
