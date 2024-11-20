@@ -30,6 +30,7 @@ public class Wand : MonoBehaviour, IWeapon
     public void SpawnWandProjectileAnimEvent()
     {
         GameObject newLaser = Instantiate(magicLaser, magicLaserSpawnPoint.position, Quaternion.identity);
+        newLaser.GetComponent<MagicLaser>().UpdateLaserRange(weaponInfo.weaponRange);
     }
 
     public WeaponInfo GetWeaponInfo()
