@@ -405,7 +405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d21fb77888b8e84ebefee370ee0aca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
 --- !u!1001 &192699421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22921,10 +22920,6 @@ PrefabInstance:
     - target: {fileID: 1407464752663976672, guid: 8571de372b03b404e8b98f2bf02c9784, type: 3}
       propertyPath: m_Name
       value: Slime
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534330773789600754, guid: 8571de372b03b404e8b98f2bf02c9784, type: 3}
-      propertyPath: startingHealth
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5742320161625344702, guid: 8571de372b03b404e8b98f2bf02c9784, type: 3}
       propertyPath: m_LocalPosition.x
