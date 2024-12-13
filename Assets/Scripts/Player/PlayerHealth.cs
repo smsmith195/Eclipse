@@ -31,16 +31,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (enemy)
         {
-            TakeDamage(1, other.transform);
+            TakeDamage(1);
+            knockback.GetKnockedBack(other.gameObject.transform, knockBackThrustAmount);
+            StartCoroutine(flash.FlashRoutine());
         }
     }
 
-    public void TakeDamage(int damageAmount, Transform hitTransform)
+    private void TakeDamage(int damageAmount)
     {
-        if (!canTakeDamage) {return;}
-        
-        knockback.GetKnockedBack(hitTransform, knockBackThrustAmount);
-        StartCoroutine(flash.FlashRoutine());
         canTakeDamage = false;
         currentHealth -= damageAmount;
         Debug.Log(currentHealth);
