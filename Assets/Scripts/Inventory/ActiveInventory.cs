@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ActiveInventory : MonoBehaviour
 {
-    private int activeSlotIndexNum = 1;
+    private int activeSlotIndexNum = 2;
 
     private PlayerControls playerControls;
 
@@ -19,7 +19,7 @@ public class ActiveInventory : MonoBehaviour
     {
         playerControls.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
 
-        ToggleActiveHighlight(0);
+        ToggleActiveHighlight(1);
     }
 
     private void OnEnable()
