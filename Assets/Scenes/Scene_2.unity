@@ -31033,6 +31033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 3847554036176964596, guid: befedd159a85b80ffb1ee4b4cc734d9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7149470368926223105, guid: befedd159a85b80ffb1ee4b4cc734d9d, type: 3}
       propertyPath: moveSpeed
       value: 7

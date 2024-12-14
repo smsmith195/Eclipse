@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87db4c6baf590548b4052a43aec9ffa, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 4659976989931955180, guid: fc720facb0abddf6a856b0c9d516b32a, type: 3}
+  weaponPrefab: {fileID: 7223552774058688067, guid: fc720facb0abddf6a856b0c9d516b32a, type: 3}
   weaponCooldown: 0.8
   weaponDamage: 1
   weaponRange: 12
