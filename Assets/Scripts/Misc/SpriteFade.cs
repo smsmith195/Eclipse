@@ -5,12 +5,21 @@ using UnityEngine;
 public class SpriteFade : MonoBehaviour
 {
     [SerializeField] private float fadeTime = .4f;
+    [SerializeField] private bool fadeOnStart = false;
     
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        if (fadeOnStart)
+        {
+            StartCoroutine(SlowFadeRoutine());
+        }
     }
 
     public IEnumerator SlowFadeRoutine()

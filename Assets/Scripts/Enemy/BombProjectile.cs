@@ -8,7 +8,8 @@ public class BombProjectile : MonoBehaviour
     [SerializeField] private AnimationCurve bombAnimCurve;
     [SerializeField] private float heightY = 3f;
     [SerializeField] private GameObject projectileShadow;
-    [SerializeField]private Vector3 shadowSpawnPos;
+    [SerializeField] private Vector3 shadowSpawnPos;
+    [SerializeField] private GameObject boomPrefab;
     
     private void Start()
     {
@@ -35,6 +36,7 @@ public class BombProjectile : MonoBehaviour
 
             yield return null;
         }
+        Instantiate(boomPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
