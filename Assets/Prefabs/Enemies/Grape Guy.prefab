@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 333985794583271085}
   - component: {fileID: 954074542775507873}
   - component: {fileID: 8331836831196175699}
+  - component: {fileID: -1802954609766586034}
   m_Layer: 0
   m_Name: Grape Guy
   m_TagString: Untagged
@@ -288,6 +289,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomberProjectilePrefab: {fileID: 7595493636771730411, guid: cdb798e06dac7994b99d8f255c4c7648, type: 3}
+--- !u!114 &-1802954609766586034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4291245749484239330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4305364d6eb1a26439b0a3dfdbca981c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 7162809278808004068, guid: 02dcc2031da63c24ea0ca760173982cb, type: 3}
+  healthPickup: {fileID: 7162809278808004068, guid: 1311b456ee7bbc6478558ccd1a4ae52e, type: 3}
+  staminaPickup: {fileID: 7162809278808004068, guid: 883e0816fe156344bb418054074eb3e5, type: 3}
 --- !u!1 &6397345359585987231
 GameObject:
   m_ObjectHideFlags: 0
