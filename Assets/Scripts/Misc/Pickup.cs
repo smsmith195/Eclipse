@@ -94,7 +94,7 @@ public class Pickups : MonoBehaviour
                 Debug.Log("Coin Collected");
                 break;
             case PickupType.StaminaPickup:
-                // heal player
+                Stamina.Instance.RefreshStamina();
                 Debug.Log("Stamina Collected");
                 break;
             case PickupType.HealthPickup:
