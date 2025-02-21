@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Singleton<PlayerHealth>
 {
@@ -15,6 +16,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private Knockback knockback;
     private Flash flash;
     const string HEALTH_SLIDER_TEXT = "Health Slider";
+    const string TOWN_TEXT = "Town";
+    readonly int DEATH_HASH = Animator.StringToHash("Death");
 
     protected override void Awake()
     {
@@ -70,8 +73,15 @@ public class PlayerHealth : Singleton<PlayerHealth>
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            Debug.Log("Player Death");
+            GetComponent<Animator>().SetTrigger(DEATH_HASH);
+            StartCoroutine(DeathLoadSceneRoutine());
         }
+    }
+
+    private IEnumerator DeathLoadSceneRoutine()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(TOWN_TEXT);
     }
     
     private IEnumerator DamageRecoveryRoutine()
