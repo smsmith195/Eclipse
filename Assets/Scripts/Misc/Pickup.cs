@@ -101,6 +101,8 @@ public class Pickups : MonoBehaviour
                 PlayerHealth.Instance.HealPlayer();
                 Debug.Log("Health Collected");
                 break;
+            default:
+                break;
         }
     }
 }

@@ -70,7 +70,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Move()
     {
-        if (knockback.GettingKnockBack || PlayerHealth.Instance.isDead) { return; }
+        if (knockback.GettingKnockBack || PlayerHealth.Instance.IsDead) { return; }
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
 
