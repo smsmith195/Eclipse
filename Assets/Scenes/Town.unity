@@ -22332,7 +22332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b379601dee70d5f0b9ad216a255bda07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71174abc275d15147bfef1f992214195, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23349,7 +23349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1246247691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23366,10 +23366,10 @@ RectTransform:
   - {fileID: 774335015}
   m_Father: {fileID: 1380975845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 520, y: -60}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1246247692
 MonoBehaviour:
@@ -23413,7 +23413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 242ab36252cb7b74dbfe51a01eec1438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponInfo: {fileID: 11400000, guid: a75e89119ecec02fd9381e63dc78f9b6, type: 2}
+  weaponInfo: {fileID: 11400000, guid: 5397478412a8a814c8ca2a75a9e46981, type: 2}
 --- !u!222 &1246247694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23553,7 +23553,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 75}
-  m_SizeDelta: {x: 715, y: 150}
+  m_SizeDelta: {x: 750, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380975846
 MonoBehaviour:
@@ -23584,7 +23584,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 120, y: 120}
@@ -23845,7 +23845,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3b1b7baadd88fb4f8a42ff99022a4b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b379601dee70d5f0b9ad216a255bda07, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23876,7 +23876,7 @@ GameObject:
   - component: {fileID: 1543010758}
   - component: {fileID: 1543010757}
   m_Layer: 5
-  m_Name: Inv Slot Bow
+  m_Name: Inv Slot Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23945,7 +23945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 242ab36252cb7b74dbfe51a01eec1438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponInfo: {fileID: 11400000, guid: 5397478412a8a814c8ca2a75a9e46981, type: 2}
+  weaponInfo: {fileID: 11400000, guid: a75e89119ecec02fd9381e63dc78f9b6, type: 2}
 --- !u!222 &1543010759
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23972,7 +23972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1543576664
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23989,10 +23989,10 @@ RectTransform:
   - {fileID: 1848631948}
   m_Father: {fileID: 1380975845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205, y: -60}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543576665
 MonoBehaviour:
@@ -24063,7 +24063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1847151452
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24080,10 +24080,10 @@ RectTransform:
   - {fileID: 581889273}
   m_Father: {fileID: 1380975845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 640, y: -60}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1847151453
 MonoBehaviour:
