@@ -21,6 +21,18 @@ public class PauseMenu : MonoBehaviour
                 Pause();
            }
         }
+
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            if (GameIsPaused)
+            {
+                ExitGame();
+            }
+            else
+            {
+                //Do nothing
+            }
+        }
     }
 
     public void Resume()
@@ -35,5 +47,13 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
