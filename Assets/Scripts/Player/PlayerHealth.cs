@@ -31,8 +31,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
     private void Start()
     {
-       IsDead
- = false;
+       IsDead = false;
        currentHealth = maxHealth;
        UpdateHealthSlider();
     }
