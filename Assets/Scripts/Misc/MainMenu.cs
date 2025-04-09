@@ -5,9 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    [SerializeField] private string[] levelScenes; // Array of scene names for different levels
+
+    public void PlayGame(int levelIndex)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (levelIndex >= 0 && levelIndex < levelScenes.Length)
+        {
+            SceneManager.LoadScene(levelScenes[levelIndex]);
+        }
+        else
+        {
+            Debug.LogError("Invalid level index!");
+        }
     }
 
     public void QuitGame()

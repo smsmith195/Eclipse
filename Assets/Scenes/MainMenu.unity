@@ -382,6 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431e39e8bbbd2b4499dc3a95c18ff056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelScenes:
+  - DemoScene
 --- !u!1 &152279176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,7 +1530,7 @@ MonoBehaviour:
       - m_Target: {fileID: 145060419}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: PlayGame
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
