@@ -9,6 +9,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown = 3f;
     [SerializeField] private bool stopMovingWhileAttacking = false;
+    [SerializeField] private float roamDistance = 5f; // Maximum distance from current position to roam
+    [SerializeField] private float roamSpeed = 1f; // Speed multiplier for roaming movement
 
     private bool canAttack = true;
 
@@ -27,6 +29,7 @@ public class EnemyAi : MonoBehaviour
     {
         enemyPathfinding = GetComponent<EnemyPathfinding>();
         state = State.Roaming;
+        enemyPathfinding.SetMoveSpeed(roamSpeed);
     }
 
     private void Start()
@@ -104,7 +107,8 @@ public class EnemyAi : MonoBehaviour
     private Vector2 GetRoamingPosition()
     {
         timeRoaming = 0f;
-        return new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        Vector2 randomDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        return (Vector2)transform.position + randomDirection * roamDistance;
     }
 
 }
