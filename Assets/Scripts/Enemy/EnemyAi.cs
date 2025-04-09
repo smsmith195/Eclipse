@@ -11,11 +11,16 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private bool stopMovingWhileAttacking = false;
     [SerializeField] private float roamDistance = 5f; // Maximum distance from current position to roam
     [SerializeField] private float roamSpeed = 1f; // Speed multiplier for roaming movement
+    [SerializeField] private Vector2 initialMovementDirection = Vector2.down; // Direction for initial movement
+    [SerializeField] private float initialMovementDistance = 3f; // Distance to move initially
 
     private bool canAttack = true;
+    private bool hasCompletedInitialMovement = false;
+    private Vector2 initialTargetPosition;
 
     private enum State
     {
+        InitialMovement,
         Roaming,
         Attacking
     }
@@ -28,12 +33,14 @@ public class EnemyAi : MonoBehaviour
     private void Awake()
     {
         enemyPathfinding = GetComponent<EnemyPathfinding>();
-        state = State.Roaming;
+        state = State.InitialMovement;
         enemyPathfinding.SetMoveSpeed(roamSpeed);
     }
 
     private void Start()
     {
+        // Calculate initial target position based on spawn position and direction
+        initialTargetPosition = (Vector2)transform.position + initialMovementDirection.normalized * initialMovementDistance;
         roamPosition = GetRoamingPosition();
     }
 
@@ -46,14 +53,35 @@ public class EnemyAi : MonoBehaviour
     {
         switch (state)
         {
-            default:
+            case State.InitialMovement:
+                InitialMovement();
+                break;
+
             case State.Roaming:
                 Roaming();
-            break;
+                break;
 
             case State.Attacking:
                 Attacking();
-            break;
+                break;
+        }
+    }
+
+    private void InitialMovement()
+    {
+        enemyPathfinding.MoveTo(initialTargetPosition);
+
+        // Check if we've reached the initial target position
+        if (Vector2.Distance(transform.position, initialTargetPosition) <= enemyPathfinding.GetStoppingDistance())
+        {
+            state = State.Roaming;
+            hasCompletedInitialMovement = true;
+        }
+
+        // Still check for player in range during initial movement
+        if (Vector2.Distance(transform.position, PlayerController.Instance.transform.position) < attackRange)
+        {
+            state = State.Attacking;
         }
     }
 
@@ -77,7 +105,7 @@ public class EnemyAi : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, PlayerController.Instance.transform.position) > attackRange)
         {
-            state = State.Roaming;
+            state = hasCompletedInitialMovement ? State.Roaming : State.InitialMovement;
         }
         
         if (attackRange != 0 && canAttack)
@@ -110,5 +138,4 @@ public class EnemyAi : MonoBehaviour
         Vector2 randomDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
         return (Vector2)transform.position + randomDirection * roamDistance;
     }
-
 }

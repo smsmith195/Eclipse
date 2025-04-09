@@ -73,4 +73,9 @@ public class EnemyPathfinding : MonoBehaviour
     {
         moveSpeed = speed;
     }
+
+    public float GetStoppingDistance()
+    {
+        return stoppingDistance;
+    }
 }
