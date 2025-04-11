@@ -18,7 +18,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private Knockback knockback;
     private Flash flash;
     const string HEALTH_SLIDER_TEXT = "Health Slider";
-    const string TOWN_TEXT = "Town";
+    const string MAIN_MENU_TEXT = "MainMenu";
     readonly int DEATH_HASH = Animator.StringToHash("Death");
 
     protected override void Awake()
@@ -89,7 +89,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
         Stamina.Instance.ReplenishStaminaOnDeath();
-        SceneManager.LoadScene(TOWN_TEXT);
+        SceneManager.LoadScene(MAIN_MENU_TEXT);
     }
     
     private IEnumerator DamageRecoveryRoutine()
