@@ -6,7 +6,7 @@ public class SpawnPoint : MonoBehaviour
     [SerializeField] private Vector2 initialMovementDirection = Vector2.down;
     [SerializeField] private float initialMovementDistance = 3f;
 
-    public void SpawnEnemy(GameObject enemyPrefab)
+    public GameObject SpawnEnemy(GameObject enemyPrefab)
     {
         GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
         
@@ -22,6 +22,8 @@ public class SpawnPoint : MonoBehaviour
             if (directionField != null) directionField.SetValue(enemyAI, initialMovementDirection);
             if (distanceField != null) distanceField.SetValue(enemyAI, initialMovementDistance);
         }
+
+        return enemy;
     }
 
     // Draw gizmos to visualize spawn point and initial movement direction
